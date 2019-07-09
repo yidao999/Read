@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.module_audio">
+
+    <application>
+        <activity
+            android:name=".mvp.ui.activity.AudioDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"></activity>
+        <activity
+            android:name=".mvp.ui.activity.AudioListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTask"
+            /> <!-- 在组件集成宿主时, 由于宿主已经声明了 CommonSDK 的公有 ConfigModule, 所以在这里只需要声明业务组件自己的 ConfigModule -->
+        <meta-data
+            android:name="com.example.module_audio.app.GlobalConfiguration"
+            android:value="ConfigModule" />
+
+        <service android:name=".player.PlaybackService">
+            <intent-filter>
+                <action android:name="com.github.baby.owspace.ACTION.PLAY_TOGGLE" />
+                <action android:name="com.github.baby.owspace.ACTION.PLAY_NEXT" />
+                <action android:name="com.github.baby.owspace.ACTION.PLAY_LAST" />
+                <action android:name="com.github.baby.owspace.ACTION.STOP_SERVICE" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,18 @@
+<resources>
+
+    <style name="SplashTheme" parent="public_AppTheme">
+        <item name="colorPrimary">@color/public_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/public_colorPrimaryDark</item>
+        <item name="colorAccent">@color/public_colorAccent</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@drawable/welcome_default2</item>
+    </style>
+
+    <style name="MenuColunmStyle">
+        <item name="android:textSize">40.0sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>
